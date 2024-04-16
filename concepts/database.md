@@ -12,8 +12,7 @@ Database normalization is a technique of organizing the data into multiple relat
 
 <strong> Types of data normalization: </strong><br>
 1) 1st normal form<br>
-The first normal form focus is on designing scalable tables that can be easily extended, and are easy to retrieve data from.<br>
-The first normal form has the following 4 rules:<br>
+The first normal form focus is on designing scalable tables that can be easily extended. The first normal form has the following 4 rules:<br>
 <ul>
 - A single cell/attribute must not hold more than one value (atomicity)<br>
 - Values stored in a column should be of the same data type.<br>
