@@ -13,15 +13,17 @@ Database normalization is a technique of organizing the data into multiple relat
 
 
 <strong> Types of data normalization: </strong><br>
-1) 1st normal form (1NF):<br>
-<ul>
-1- Each row in the table have a unique identifier (primary key).<br>
-2- Each cell in the table hold an atomic (indivisible) value.<br>
+<br>
+<img src="./nf.png" width="250"/><br>
+
+1- First normal form (1NF):<br>
+1) Each row in the table have a unique identifier (primary key).<br>
+2) Each cell in the table hold an atomic (indivisible) value.<br>
 </ul>
-2) 2nd normal form (2NF):<br>
+2- Second normal form (2NF):<br>
 <ul>
-1- The table should be in the 1st normal form.<br>
-2- There should be a <strong>Functional Dependency (FD)</strong> between the PK and every non-key column in the table. There should be <ins>no <strong>Partial Dependencies</strong></ins> in the table.<br>
+1) The table should be in the 1st normal form.<br>
+2) There should be a <strong>Functional Dependency (FD)</strong> between the PK and every non-key column in the table. There should be <ins>no <strong>Partial Dependencies</strong></ins> in the table.<br>
 <ul>
 &rarr;&rarr; What is <strong>Functional Dependency (FD)</strong>?<br>
 A functional dependency (FD) is a relationship between two attributes, typically between the primary key (PK) and other non-key attributes within a table. For any relation R, attribute Y is functionally dependent on attribute X (usually the PK), if for every valid instance of X, that value of X uniquely determines the value of Y.
@@ -51,7 +53,7 @@ In the above table, student_id and subject_id forms a composite primary key. If 
 <ins>Therefore {subject_id} → {teacher_name} is a partial dependency.</ins><br>
 </ul>
 </ul>
-3) 3rd normal form (3NF)<br>
+3- Third normal form (3NF)<br>
 <ul>
 1- The table should be in the 2nd normal form.<br>
 2- There should be <ins>no <strong>Transitive Dependencies</strong></ins> in the table.<br>
@@ -77,10 +79,5 @@ A transitive dependency exists when you have the following functional dependency
 <ins>Therefore {Book} → {Author nationality} is a transitive dependency.</ins><br>
 </ul>
 <ul>
-4) Boyce-Codd normal form (BCNF)<br>
-
+4- Boyce-Codd normal form (BCNF)<br>
 </p>
-
-
-
-![Database Normalization](nf.jpg)
