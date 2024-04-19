@@ -37,7 +37,7 @@ A functional dependency (FD) is a relationship between two attributes, typically
         A given valid SIN number determines the value of name, address and date of birth.
 
 &rarr;&rarr; What is <strong>Partial Dependency</strong>? <br>
-A partial dependency exists when a non-primary column depends upon a single column that is a part of a composite primary key. Note partial dependency cannot occur when there is a simple primary key.
+A partial dependency exists when a non-primary column depends upon a single column that is a part of <strong>a composite primary key</strong>. Note <ins>partial dependency cannot occur when there is a simple primary key.</ins>
 
 
         student_id      subject_id      marks   teacher_name
@@ -78,6 +78,6 @@ A transitive dependency exists when you have the following functional dependency
 {Author} → {Author nationality} <br>
 <ins>Therefore {Book} → {Author nationality} is a transitive dependency.</ins><br>
 </ul>
-<ul>
+</ul>
 4- Boyce-Codd normal form (BCNF)<br>
 </p>
