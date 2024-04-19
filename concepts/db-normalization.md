@@ -23,7 +23,7 @@ Database normalization is a technique of organizing the data into multiple relat
 1- The table should be in the 1st normal form.<br>
 2- There should be a <strong>Functional Dependency (FD)</strong> between the PK and every non-key column in the table. There should be <ins>no <strong>Partial Dependencies</strong></ins> in the table.<br>
 <ul>
-&rarr;&rarr; What is <strong>Dependency or Functional Dependency (FD)</strong> in a table?<br>
+&rarr;&rarr; What is <strong>Functional Dependency (FD)</strong>?<br>
 A functional dependency (FD) is a relationship between two attributes, typically between the primary key (PK) and other non-key attributes within a table. For any relation R, attribute Y is functionally dependent on attribute X (usually the PK), if for every valid instance of X, that value of X uniquely determines the value of Y.
 
 </br>
@@ -34,36 +34,21 @@ A functional dependency (FD) is a relationship between two attributes, typically
         SIN ———-> Name, Address, DoB
         A given valid SIN number determines the value of name, address and date of birth.
 
-&rarr;&rarr; What is <strong>Partial Dependency</strong>?
-Partial dependency arises when a non-prime attribute is functionally dependent on a portion of a candidate key.
+&rarr;&rarr; What is <strong>Partial Dependency</strong>? <br>
+A partial dependency exists when a non-primary column depends upon a single column that is a part of a composite primary key. Note partial dependency cannot occur when there is a simple primary key.
 
 
-        Employee_ID     Department_ID      Employee_Name        Department_Name
-        E01             D01                     John            Marketing
-        E02             D02                     Jane            Engineering
-        E03             D01                     Tommy           Marketing
-
-Employee_ID (primary key) = A unique ID of the employee<br>
-Employee_Name (non-key attribute) = Name of the employee<br>
-Department_ID (non-key attribute)  = A unique ID of the department<br>
-Department_Name (non-key attribute) = Name of the department<br>
-
-In the above table, the Department_Name can be determined using the Department_ID, creating a partial dependency.<br>
-Department_ID → Department_Name <br>
-This partial dependency causes redundancy and inconsistency in the table. For example, the Department_Name “marketing” is repeated twice for different employees. If we want to change the name of the department, we have to update multiple rows in the table. This can lead to errors and anomalies.
-We can decompose the tables as shown below to remove partial dependencies:
-
-        Employee_ID     Department_ID   Employee_Name
-        E01             D01             John
-        E02             D02             Jane
-        E03             D01             Tommy
-<br>
+        student_id      subject_id      marks   teacher_name
+        10              1               70      Java Teacher
+        10              2               75      C++ Teacher
+        11              1               80      Java Teacher
 
 
-        Department_ID           Department_Name
-        D01                     Marketing
-        D02                     Engineering
+In the above table, student_id and subject_id forms a composite primary key. If you need to get the mark for the students_id 10 you need to enter the subject_id too. Therefore, we need student_id + subject_id to uniquely identify any row. However, teacher_name depends only on subject_id, this causes partial dependency.
 
+{student_id + subject_id} (composite primary key) → {marks} <br>
+{subject_id} → {teacher_name} <br>
+<ins>Therefore {subject_id} → {teacher_name} is a partial dependency.</ins><br>
 </ul>
 </ul>
 3) 3rd normal form (3NF)<br>
@@ -89,9 +74,13 @@ A transitive dependency exists when you have the following functional dependency
 
 {Book} → {Author} <br>
 {Author} → {Author nationality} <br>
-Therefore {Book} → {Author nationality} is a transitive dependency.<br>
+<ins>Therefore {Book} → {Author nationality} is a transitive dependency.</ins><br>
 </ul>
 <ul>
 4) Boyce-Codd normal form (BCNF)<br>
-![Normals Forms](NF.png)
+
 </p>
+
+
+
+![Database Normalization](nf.jpg)
