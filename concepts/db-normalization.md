@@ -1,7 +1,6 @@
 <h1>Database Normalization in Relational Schema</h1>
 <p>
-
-Database normalization is a technique of organizing the data into multiple related narrower tables with the purpose of minimizing DATA REDUNDANCY.<br>
+Database normalization is a technique of organizing the data into multiple related tables with the purpose of minimizing DATA REDUNDANCY.<br>
 
 <strong> Advantages of data normalization: </strong><br>
 1) Improving overall database organization<br>
@@ -11,8 +10,7 @@ Database normalization is a technique of organizing the data into multiple relat
 5) Making it easier to deal with larger amounts of data<br>
 
 
-<strong> Types of data normalization: </strong><br>
-<br>
+<h3>Types of data normalization:</h3>
 <img src="./nf.png" width="250"/><br>
 
 1- First normal form (1NF):<br>
