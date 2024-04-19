@@ -55,7 +55,7 @@ In the above table, student_id and subject_id forms a composite primary key. If 
 1- The table should be in the 2nd normal form.<br>
 2- There should be <ins>no <strong>Transitive Dependencies</strong></ins> in the table.<br>
 <ul>
-&rarr;&rarr; What is <strong>Transitive Dependency</strong>?
+&rarr;&rarr; What is <strong>Transitive Dependency</strong>?<br>
 A transitive dependency exists when you have the following functional dependency pattern.
 
 </br>
