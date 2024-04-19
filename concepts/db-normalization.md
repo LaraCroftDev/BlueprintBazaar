@@ -1,5 +1,4 @@
-<h1>Database Management System (DBMS):</h1>
-<h3><li>Database Normalization in Relational Schema</li></h3>
+<h1>Database Normalization in Relational Schema</h1>
 <p>
 
 Database normalization is a technique of organizing the data into multiple related narrower tables with the purpose of minimizing DATA REDUNDANCY.<br>
@@ -37,7 +36,7 @@ A functional dependency (FD) is a relationship between two attributes, typically
         A given valid SIN number determines the value of name, address and date of birth.
 
 &rarr;&rarr; What is <strong>Partial Dependency</strong>? <br>
-A partial dependency exists when a non-primary column depends upon a single column that is a part of <strong>a composite primary key</strong>. Note <ins>partial dependency cannot occur when there is a simple primary key.</ins>
+A partial dependency exists when a non-primary column depends upon a single column that is a part of <strong>a composite primary key</strong>.<br> Note <ins>partial dependency cannot occur when there is a simple primary key.</ins>
 
 
         student_id      subject_id      marks   teacher_name
